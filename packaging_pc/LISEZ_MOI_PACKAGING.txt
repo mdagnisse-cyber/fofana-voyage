@@ -1,0 +1,77 @@
+============================================================
+ FOFANA VOYAGE - Comment obtenir une vraie application
+ (sans ligne de commande pour les utilisateurs finaux)
+============================================================
+
+Ce dossier contient tout ce qu'il faut. Cette installation
+se fait UNE SEULE FOIS, par une personne un peu technique.
+Après ça, les utilisateurs installent normalement, comme
+n'importe quelle application.
+
+
+------------------------------------------------------------
+1) VERSION PC (Windows) -> fichier .exe
+------------------------------------------------------------
+
+Etapes (a faire une seule fois, sur un PC Windows) :
+
+ 1. Installer Python depuis https://python.org (cocher la case
+    "Add Python to PATH" pendant l'installation).
+ 2. Copier tout le dossier "fofana_voyage" sur ce PC.
+ 3. Ouvrir le dossier "fofana_voyage/packaging_pc".
+ 4. Double-cliquer sur "construire_exe.bat".
+ 5. Attendre (5-15 minutes selon le PC, telecharge des paquets).
+ 6. Une fois termine, l'application se trouve dans :
+       fofana_voyage/dist/FofanaVoyage/FofanaVoyage.exe
+
+ => Ce dossier "FofanaVoyage" complet peut ensuite etre copie
+    sur n'importe quel PC Windows et lance en double-cliquant
+    sur FofanaVoyage.exe, sans rien installer d'autre.
+
+ Astuce : pour distribuer un seul fichier .exe (installateur),
+ on peut ensuite utiliser un outil gratuit comme "Inno Setup"
+ pour empaqueter le dossier "dist/FofanaVoyage" en un seul
+ programme d'installation classique (Suivant > Suivant > Terminer).
+
+
+------------------------------------------------------------
+2) VERSION TELEPHONE (Android) -> fichier .apk
+------------------------------------------------------------
+
+La construction se fait dans le cloud via GitHub (gratuit),
+pas besoin d'installer quoi que ce soit de lourd sur le
+telephone ou le PC.
+
+Etapes (a faire une seule fois) :
+
+ 1. Creer un compte gratuit sur https://github.com
+ 2. Creer un nouveau depot (repository), par exemple
+    "fofana-voyage".
+ 3. Envoyer (uploader) tout le contenu du dossier
+    "fofana_voyage" dans ce depot (bouton "Add file" ->
+    "Upload files" sur le site GitHub, glisser-deposer les
+    fichiers - aucune ligne de commande necessaire).
+ 4. Aller dans l'onglet "Actions" du depot GitHub.
+ 5. Le workflow "Construire l'APK Android" se lance tout seul
+    (ca prend 10-20 minutes la premiere fois).
+ 6. Une fois termine (coche verte), cliquer sur le resultat,
+    puis telecharger le fichier "fofana-voyage-apk" en bas
+    de la page : c'est votre APK.
+ 7. Envoyer ce fichier .apk aux utilisateurs (WhatsApp, mail,
+    Google Drive...). Sur leur telephone, il suffit d'ouvrir
+    le fichier et d'appuyer sur "Installer" (Android demandera
+    d'autoriser "sources inconnues" la premiere fois, c'est
+    normal pour une appli hors Play Store).
+
+ A chaque fois que le code est modifie et renvoye sur GitHub,
+ un nouvel APK est reconstruit automatiquement.
+
+
+------------------------------------------------------------
+NOTES
+------------------------------------------------------------
+- La base de donnees (colis, agents...) sera recreee/stockee
+  localement sur chaque appareil, comme actuellement.
+- Identifiants par defaut : admin / admin123 et agent1 / agent123
+- Si la construction de l'APK echoue sur GitHub Actions, copier
+  le message d'erreur affiche et le transmettre pour diagnostic.

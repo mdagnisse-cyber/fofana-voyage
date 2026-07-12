@@ -1,0 +1,40 @@
+# ============================================================
+# FOFANA VOYAGE - Gestion des Colis v2.4
+# Packages a installer dans Pydroid 3 -> Menu => Pip
+# ============================================================
+#
+# OBLIGATOIRES (installer dans cet ordre) :
+#
+#   1. kivy
+#   2. pillow
+#   3. reportlab
+#   4. qrcode
+#   5. plyer
+#
+# PAS BESOIN de opencv-python (version premium Pydroid)
+# PAS BESOIN de pyzbar
+#
+# ============================================================
+# POUR LE SCANNER QR SUR ANDROID :
+# ============================================================
+#
+# Installer depuis le Play Store (gratuit) :
+#   "Barcode Scanner" de ZXing Team
+#   https://play.google.com/store/apps/details?id=com.google.zxing.client.android
+#
+# Une fois installe, le bouton [CAM] Scanner QR ouvrira
+# automatiquement Barcode Scanner, et le resultat reviendra
+# directement dans l application Fofana Voyage.
+#
+# ============================================================
+# IDENTIFIANTS PAR DEFAUT :
+# ============================================================
+#   Admin  : admin  / admin123
+#   Agent  : agent1 / agent123
+# ============================================================
+
+kivy>=2.2.0
+pillow>=9.0.0
+reportlab>=4.0.0
+qrcode>=7.3.0
+plyer>=2.1.0

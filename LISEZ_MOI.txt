@@ -1,0 +1,76 @@
+==========================================================
+   FOFANA VOYAGE - Gestion des Colis v2.1
+   Compatible : Pydroid 3 (Android) et PC Windows
+==========================================================
+
+--- INSTALLATION PYDROID 3 (Android) ---
+
+  1. Installer Pydroid 3 (Play Store)
+
+  2. Menu => Pip => installer ces packages un par un :
+       kivy
+       pillow
+       reportlab
+       qrcode
+
+  3. Copier le dossier fofana_voyage/ dans :
+       /storage/emulated/0/fofana_voyage/
+
+  4. Ouvrir main.py dans Pydroid 3 => Run
+
+--- INSTALLATION PC WINDOWS ---
+
+  1. Python 3.10+ (python.org) - cocher "Add to PATH"
+  2. pip install kivy pillow reportlab qrcode
+  3. Double-clic sur lancer.bat
+
+--- IDENTIFIANTS PAR DEFAUT ---
+
+  Admin  :  admin   /  admin123
+  Agent  :  agent1  /  agent123
+  CHANGER ces mots de passe apres la premiere connexion !
+
+--- NAVIGATION ---
+
+  2 rangees de boutons en bas de l'ecran.
+  Les pages visibles dependent du role :
+
+  AGENT    : Accueil | Colis | Suivi | Retrait | Alertes | Fichiers
+  MANAGER  : + Rapports | Agences
+  ADMIN    : + Agents | Parametres (acces complet)
+
+--- FICHIERS GENERES ---
+
+  Tous les PDF et QR codes sont dans :
+    fofana_voyage/assets/bordereaux/   (PDF depot + retrait)
+    fofana_voyage/assets/qrcodes/      (QR codes a coller sur les colis)
+    fofana_voyage/assets/rapports/     (rapports statistiques)
+
+  Sur Android : page [FIC] Fichiers => bouton Ouvrir ou Apercu QR
+
+--- CONFIGURATION SMS AUTOMATIQUES ---
+
+  3 methodes disponibles (configurables dans Parametres) :
+
+  1. android         : ouvre l'app SMS du telephone Android
+                       L'agent appuie juste sur Envoyer
+                       (RECOMMANDE pour commencer)
+
+  2. africas_talking : API SMS Afrique - gratuit en sandbox
+     - S'inscrire sur africastalking.com
+     - Recuperer l'API Key dans Settings
+     - Coller dans Parametres > SMS
+     - username = "sandbox" pour les tests gratuits
+
+  3. textbelt        : API HTTP simple, 1 SMS/jour gratuit
+                       Sans inscription
+
+  Les SMS sont envoyes automatiquement :
+  - A l'arrivee d'un colis (notification destinataire)
+  - Au moment du retrait (code OTP 6 chiffres)
+
+--- SAUVEGARDE ---
+
+  Parametres => Sauvegarder la base
+  Fichier cree dans : fofana_voyage/database/backups/
+
