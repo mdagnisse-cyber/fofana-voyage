@@ -9,7 +9,7 @@ source.include_exts = py,png,jpg,jpeg,kv,atlas,ttf,db
 
 version = 2.0.0
 
-requirements = python3==3.10.13,kivy,pillow,reportlab,qrcode,plyer
+requirements = python3==3.10.13,hostpython3==3.10.13,kivy,pillow,reportlab,qrcode,plyer
 
 orientation = portrait
 fullscreen = 0
