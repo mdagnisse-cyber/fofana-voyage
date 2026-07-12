@@ -32,6 +32,8 @@ jobs:
           pip install buildozer cython==0.29.36
 
       - name: Construire l'APK (debug)
+        env:
+          JAVA_HOME: /usr/lib/jvm/temurin-17-jdk-amd64
         run: |
           yes | buildozer android debug
 
