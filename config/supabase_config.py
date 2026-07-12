@@ -14,5 +14,5 @@ Supabase. Ne mets JAMAIS ici la clé "service_role" (celle-là doit
 toujours rester secrète et n'est jamais utilisée dans l'application).
 """
 
-SUPABASE_URL = "https://VOTRE-PROJET.supabase.co"
-SUPABASE_KEY = "VOTRE_CLE_ANON_PUBLIC_ICI"
+SUPABASE_URL = "https://csllentzitpgpcsxbybx.supabase.co/rest/v1/"
+SUPABASE_KEY = "sb_publishable_u4u2vGFgI3zu8q1dNI_ilg_MxQ3ayr5"
