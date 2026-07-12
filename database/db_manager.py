@@ -78,6 +78,19 @@ def delete(table: str, filters: dict) -> list[dict]:
     return r.json()
 
 
+def upsert(table: str, data: dict, on_conflict: str) -> list[dict]:
+    """
+    Insère une ligne, ou la met à jour si la clé (on_conflict) existe déjà.
+    Ex: upsert("parametres", {"cle": "devise", "valeur": "FCFA"}, on_conflict="cle")
+    """
+    url = f"{SUPABASE_URL}/rest/v1/{table}"
+    headers = {**_HEADERS, "Prefer": "resolution=merge-duplicates,return=representation"}
+    params = {"on_conflict": on_conflict}
+    r = requests.post(url, headers=headers, params=params, json=data, timeout=_TIMEOUT)
+    r.raise_for_status()
+    return r.json()
+
+
 def rpc(function_name: str, params: dict | None = None):
     """Appelle une fonction SQL sécurisée définie côté Supabase."""
     url = f"{SUPABASE_URL}/rest/v1/rpc/{function_name}"
@@ -105,3 +118,4 @@ def init_database():
 def seed_initial_data():
     """Les données initiales sont déjà créées côté Supabase (SQL Editor)."""
     pass
+    
