@@ -19,7 +19,7 @@ icon.filename = %(source.dir)s/assets/icons/accueil.png
 android.permissions = CAMERA,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE,INTERNET,SEND_SMS
 
 android.api = 33
-android.minapi = 21
+android.minapi = 24
 android.ndk = 25b
 android.accept_sdk_license = True
 android.archs = arm64-v8a,armeabi-v7a
